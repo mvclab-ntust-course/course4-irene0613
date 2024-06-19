@@ -26,9 +26,12 @@
   <img src="https://github.com/mvclab-ntust-course/course4-irene0613/blob/main/image/6.png" width="500px"><br>
   
 ### Code & Result  
-* 將資料集換成我們自己創建的資料集，更改imgsz=640、model=yolov8n.pt後執行  
+* 將資料集換成我們自己創建的資料集，將yolo train的部分修改成以下程式碼後執行  
+```
+!yolo task=detect mode=train model=yolov8n.pt data={dataset.location}/data.yaml epochs=25 imgsz=640 plots=True
+```  
 <img src="https://github.com/mvclab-ntust-course/course4-irene0613/blob/main/image/7.png" width="500px"><br>
 * 訓練完後會產生best.pt，其模型結果如下  
 <img src="https://github.com/mvclab-ntust-course/course4-irene0613/blob/main/image/8.png" width="500px"><br>
 * 以下為預測結果  
-<img src="https://github.com/mvclab-ntust-course/course4-irene0613/blob/main/image/9.png" width="500px"><br>
+<img src="https://github.com/mvclab-ntust-course/course4-irene0613/blob/main/image/9.jpg" width="500px"><br>
